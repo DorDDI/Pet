@@ -1,0 +1,269 @@
+body {
+    background: #f0f0e8;
+    color: #333333;
+    margin-top: 5rem;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #444444;
+  }
+  
+  .bg-steel-movie {
+        background-color: #ffd117;
+  }
+  
+  
+  .site-header .navbar-nav .nav-link {
+    color: #000000;
+  }
+  
+  .site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+  }
+  
+  .site-header .navbar-nav  .nav-link.active {
+    font-weight: 500;
+  }
+  
+  .watchlist-icon .navbar-nav .nav-link {
+    color: #000000;
+  }
+  
+  .watchlist-icon .navbar-nav .nav-link:hover {
+    color: #0099ff;
+  }
+  
+  .watchlist-icon .navbar-nav  .nav-link.active {
+    font-weight: 100;
+  }
+  
+  .content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+  }
+  
+  .article-title {
+    color: #444444;
+    text-decoration:none;
+  }
+  
+  a.article-title:hover {
+    color: #428bca;
+    text-decoration:none;
+  }
+  
+  .article-content {
+    white-space: pre-line;
+  }
+  
+  .article-img {
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+    float: left;
+  }
+  
+  .movie-img {
+    height: 70px;
+    width: 70px;
+    margin-right: 16px;
+    float: left;
+  }
+  
+  .article-metadata {
+    text-decoration:none;
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e3e3e3
+  
+  }
+  
+  .article-metadata a:hover {
+    color: #333;
+    text-decoration:none;
+  }
+  
+  .article-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+  }
+  
+  .account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 30px;
+    margin-bottom: 16px;
+    float: left;
+  
+  }
+  
+  .account-heading {
+    font-size: 2.5rem;
+  
+  }
+  
+  .media-body{
+     margin-bottom: 65px;
+  
+  }
+  
+  .movie-body{
+     margin-bottom: 30px;
+  
+  }
+  
+  
+  
+  .movie-size{
+      font-size: 20px;
+      margin-top: 20px;
+  }
+  
+  .movie-section {
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 1px;
+    margin-bottom: 10px;
+  
+  }
+  
+  .movie-section-up {
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 1px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  
+  
+  .form-group {
+      margin-bottom: 16px;
+  }
+  
+  .navbar-brand{
+      color: #444444;
+  }
+  
+  .navbar-brand-main{
+      color: #000000;
+  }
+  
+  .site-header-main .navbar-nav-main .nav-link-main:hover {
+    color: #000000;
+  }
+  
+  .bg-steel-main {
+        background-color: #9cbdbd;
+  }
+  .bg-steel-music {
+        background-color: #009e30;
+  }
+  
+  .movie-font-title
+  {
+      font-weight: bold;
+      font-size:20px;
+  }
+  .movie-font-title a
+  {
+      font-size:16px;
+      font-weight: normal;
+  
+  }
+  
+  .side-body{
+     margin-bottom: 7px;
+  
+  }
+  
+  .side-size{
+      font-size: 16px;
+      margin-top: 7px;
+  }
+  .movie-body-upcoming{
+     margin-bottom: 50px;
+  
+  }
+  
+  .movie-font-upcoming
+  {
+      font-weight: bold;
+      font-size:25px;
+  
+  }
+  
+  .movie-font-title-up
+  {
+      font-weight: bold;
+      font-size:18px;
+  }
+  .movie-font-title-up a
+  {
+      font-size:14px;
+      font-weight: normal;
+  
+  }
+  
+  .movie-font-date
+  {
+      font-weight: bold;
+      font-size:25px;
+      margin-bottom: 30px;
+  }
+  
+  .movie-watchlist-title
+  {
+      font-weight: bold;
+      font-size:45px;
+      margin-bottom: 30px;
+  }
+  
+  .right {
+  
+  height: 90px;
+  width: 90px;
+  font-size:15px;
+  }
+  
+  .watch-title {
+    color: #444444;
+    text-decoration:none;
+    font-size:40px;
+    font-weight: bold;
+  
+  }
+  
+  .movie-metadata {
+    text-decoration:none;
+    padding-bottom: 1px;
+  
+    border-bottom: 1px solid #e3e3e3
+  
+  }
+  
+  .movie-body{
+  
+     margin-bottom: 30px;
+  
+  }
+  
+  .watchlist-title {
+  
+    color: #444444;
+    text-decoration:none;
+    font-size:20px;
+  
+  
+  
+  }
+  
+  a.watchlist-title:hover {
+    color: #428bca;
+    text-decoration:none;
+  
+  }
