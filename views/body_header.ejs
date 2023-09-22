@@ -1,0 +1,46 @@
+<header class="site-header">
+    <!-- just name of the site -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-steel-main fixed-top">
+
+      <!-- navbar - class, navbar-expand-md - size, navbar-dark,bg-steel - colors,  fixed-top - place -->
+    <div class="container">
+        <!-- just to center it -->
+      <a class="navbar-brand" href="/">Pet Menu</a>
+        <!-- a - element style, here its the name -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- init the button-->
+        <span class="navbar-toggler-icon"></span>
+          <!-- donno-->
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+           <!-- where to go-->
+        <ul class="navbar-nav me-auto">
+             <!-- name of the class-->
+                <a class="nav-item nav-link" href="/index">About</a>
+            <!-- nav-item - its nevigate item, nav-link - color, href - to what path and the name of th button -->
+        </ul>
+        <ul class="navbar-nav" >
+            <!--
+                {% if current_user.is_authenticated %}     NEED TO CHECK
+             
+            {% if section == 1%}
+            <a class="nav-item nav-link" href="{{url_for('movie_posts.new_post', section=section)}}">New Post</a>
+            {% else %}
+            {% if section == 2%}
+            <a class="nav-item nav-link" href="{{url_for('music_posts.new_post', section=section)}}">New Post</a>
+            {% endif %}
+            {% endif %}
+                <a class="nav-item nav-link" href="{{url_for('users.account', section=section)}}">{{current_user.username}}</a>
+                <a class="nav-item nav-link" href="{{url_for('users.logout', section=section)}}">Logout</a>
+            {% else %}
+                <a class="nav-item nav-link" href="{{url_for('users.login', section=section)}}">Login</a>
+                <a class="nav-item nav-link" href="{{url_for('users.register', section=section)}}">Register</a>
+            {% endif %}
+            -->
+
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

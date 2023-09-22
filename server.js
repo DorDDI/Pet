@@ -7,15 +7,17 @@ const corsConf = require('./config/corsConf');
 const mongoose = require('mongoose');
 const DBconnect = require('./config/DBConnect');
 const cookieParser = require('cookie-parser');
+const ejs = require('ejs');
 
 //functions
 const { logger } = require('./functions/eventLogger');
-const errorHandler = require('./functions/errorLogger');
+const logError = require('./functions/errorHandler');
 const verifyJWT = require('./functions/JWTVerification');
 const credentials = require('./functions/credentialsHendler');
 
 const PORT = process.env.PORT || 5500;
 
+app.set('view engine', 'ejs');
 
 // Connect to MongoDB
 DBconnect();
@@ -51,18 +53,22 @@ app.use('/', express.static(path.join(__dirname, '/public')));
 
 app.use('/register', require('./routes/register'));
 app.use('/login', require('./routes/login'));
-app.use('/refresh', require('./routes/refresh'));
+//app.use('/refresh', require('./routes/refresh'));
 app.use('/logout', require('./routes/logout'));
 app.use('/home', require('./routes/mainPage'));
 app.get('/index', (req,res) => {
-    res.sendFile(path.join(__dirname, 'HTML', 'index.html'));
+    const data = {
+        pageTitle: 'index'
+    };
+    res.render('index',data);
 })
 app.use('/', require('./routes/mainPage'));
 
 
 // check the user is login:
-app.use(verifyJWT);
+//app.use(verifyJWT);
 app.use('/users', require('./routes/user'));
+app.use('/Pet_menu', require('./routes/pet_menu'));
 
 
 
@@ -70,7 +76,10 @@ app.use('/users', require('./routes/user'));
 app.all('*', (req, res) => {
     res.status(404);
     if (req.accepts('html')) {
-        res.sendFile(path.join(__dirname, 'HTML', '404.html'));
+        const data = {
+            pageTitle: '404'
+        };
+        res.render('404',data);
     } else if (req.accepts('json')) {
         res.json({ "error": "404 Not Found" });
     } else {
@@ -80,7 +89,7 @@ app.all('*', (req, res) => {
 
 
 // error logger
-app.use(errorHandler);
+app.use(logError);
 
 //run the server
 mongoose.connection.once('open', () => {

@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+  <%- include('header', { pageTitle: pageTitle }) %>
+
+</head>
+<body>
+
+  <%- include('body_header') %>
+
+
+    <main role="main" class="container">
+        <!-- main, conteiner - in the middle-->
+      <div class="row">
+          <!-- wrap the next tin rows-->
+        <div class="col-md-8">
+            <!--size of col - medium with size 8-->
+            
+            <!-- block data (name - content1)-->
+            <div class="content-section">
+                <form method="POST" action="">
+                    <fieldset class="form-group">
+                        <legend class="border-bottom mb-4">Log In</legend>
+        
+                        <div class="form-group">
+                            <h6 class="form-control-label" >Username: 
+                            <input  type="text" id="name" name="user", placeholder="Enter your Username">
+                        </h6>
+                        </div>
+
+                        <div class="form-group">
+                            <h6 class="form-control-label" >Password: 
+                            <input class="form-control-label" type="password" id="password" name="pwd", placeholder="Enter your Password">
+                        </h6>
+                        </div>
+
+                        <div class="form-group">
+                            <input class="btn btn-outline-success" type="submit" value="Submit">
+                        </div>
+                    <small class="text_muted ml-2">
+                        <a href="{{ url_for('users.reset_request') }}">Forgot Password</a>    <!--   need to check !!!!-->
+                    </small>
+                </form>
+            </div>
+            <div class="border-top pt-3">
+                <small class="text-muted">
+                    Need An Account? <a class="ml-2" href="/register">Sign Up Now</a>
+                </small>
+            </div>
+            </div>
+
+            
+
+      </div>
+    </main>
+
+    <%- include('scripts') %>
+
+  </body>
+</html>

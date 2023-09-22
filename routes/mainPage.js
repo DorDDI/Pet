@@ -4,9 +4,10 @@ const path = require('path');
 
 
 router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'HTML', 'layout.html'));
+    const data = {
+        pageTitle: 'Pet welcome'
+    };
+    res.render('menu',data);
 });
-
-
 
 module.exports = router;

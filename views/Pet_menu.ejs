@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <%- include('header', { pageTitle: pageTitle }) %>
+
+</head>
+<body>
+
+  <%- include('body_header') %>
+
+    <main role="main" class="container">
+        <!-- main, conteiner - in the middle-->
+      <div class="row">
+          <!-- wrap the next tin rows-->
+        <div class="col-md-8">
+            <!--size of col - medium with size 8-->
+            
+            <!-- block data (name - content1)-->
+            </div>
+
+            <div class="col-md-4">
+                <!-- the rigth section (becouse we did it in rows, medium size 4)-->
+              <div class="content-section">
+                  <!-- name of the class - edit in css -->
+                                <h3>Pet Sidebar</h3>
+                                  <!-- name of the side -->
+                                <p class='text-muted'>Pet sidebar note.
+                                  <!-- text-muted - gray style, after it out own text-->
+                                  <ul class="list-group">
+                                  <!-- list-group - will be a list group -->
+                                    <li class="list-group-item list-group-item-light">Option 1</li>
+                                    <li class="list-group-item list-group-item-light">Option 2</li>
+                                    <li class="list-group-item list-group-item-light">Option 3</li>
+                                    <li class="list-group-item list-group-item-light">Option 4</li>
+                                  <!-- li - list, list-group-item - make it inn a style, list-group-item-light - color, after it, name-->
+                                  </ul>
+                                </p>
+              </div>
+        </div>
+
+      </div>
+    </main>
+
+    <%- include('scripts') %>
+    </body>
+</html>
