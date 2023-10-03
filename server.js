@@ -65,7 +65,7 @@ app.get('/index', (req,res) => {
         current_user: global.current_user
     };
     res.render('index',data);
-})
+});
 app.use('/', require('./routes/mainPage'));
 
 
@@ -73,6 +73,7 @@ app.use('/', require('./routes/mainPage'));
 //app.use(verifyJWT);
 app.use('/users', require('./routes/user'));
 app.use('/Pet_menu', require('./routes/pet_menu'));
+app.use('/pet', require('./routes/pet'));
 
 
 

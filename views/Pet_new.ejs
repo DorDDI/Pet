@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <%- include('header', { pageTitle: pageTitle }) %>
+
+</head>
+<body>
+
+  <%- include('body_header', { current_user: current_user }) %>
+
+    <main role="main" class="container">
+        <!-- main, conteiner - in the middle-->
+      <div class="row">
+          <!-- wrap the next tin rows-->
+        <div class="col-md-8">
+            <!--size of col - medium with size 8-->
+            
+            <!-- block data (name - content1)-->
+
+
+
+
+            <div class="content-section">
+                <form method="POST" action="/pet">
+                    <fieldset class="form-group">
+                        <legend class="border-bottom mb-4">New Pet</legend>
+
+
+                        <div class="form-group">
+                            <h6 class="form-control-label" >Pet name: 
+                            <input type="text" id="name" name="name">
+                            </h6>
+                        </div>
+                        
+                        <div class="form-group">
+                            <h6 class="form-control-label" >Pet type:    
+                                <select name="type" id="type">
+                                    <option value="Dog">Dog</option>
+                                    <option value="Cat">Cat</option>
+                                  </select>
+                            </h6>
+        
+                                </div>
+
+                        <!-- check confiremed password-->
+
+                        
+                    </fieldset>
+                    <div class="form-group">
+                        <input class="btn btn-outline-success" type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+
+            </div>
+            <div class="col-md-4">
+                <!-- the rigth section (becouse we did it in rows, medium size 4)-->
+              <div class="content-section">
+                  <!-- name of the class - edit in css -->
+                                <h3>Pet Sidebar</h3>
+                                  <!-- name of the side -->
+                                <p class='text-muted'>Pet sidebar note.
+                                  <!-- text-muted - gray style, after it out own text-->
+                                  <ul class="list-group">
+                                  <!-- list-group - will be a list group -->
+                                    <li class="list-group-item list-group-item-light">Option 1</li>
+                                    <li class="list-group-item list-group-item-light">Option 2</li>
+                                    <li class="list-group-item list-group-item-light">Option 3</li>
+                                    <li class="list-group-item list-group-item-light">Option 4</li>
+                                  <!-- li - list, list-group-item - make it inn a style, list-group-item-light - color, after it, name-->
+                                  </ul>
+                                </p>
+              </div>
+        </div>
+
+      </div>
+    </main>
+
+    <%- include('scripts') %>
+    </body>
+</html>
