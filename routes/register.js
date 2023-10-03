@@ -7,7 +7,8 @@ const path = require('path');
 router.post('/', registerController.handleNewUser);
 router.get('/', (req, res) => {
     const data = {
-        pageTitle: 'Register'
+        pageTitle: 'Register',
+        current_user: global.current_user
     };
     res.render('register',data);
 });

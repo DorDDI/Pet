@@ -4,9 +4,11 @@ const loginController = require('../controllers/loginController');
 const path = require('path');
 
 router.post('/', loginController.handleLogin);
+
 router.get('/', (req, res) => {
     const data = {
-        pageTitle: 'Login menu'
+        pageTitle: 'Login menu',
+        current_user: global.current_user
     };
     res.render('login',data);
 });

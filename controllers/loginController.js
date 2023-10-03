@@ -41,11 +41,16 @@ const handleLogin = async (req, res) => {
         res.cookie('jwt', refreshToken, { httpOnly: true,  sameSite: 'None', maxAge: 24 * 60 * 60 * 1000 }); //secure: true, in prodeuction
 
         // Send authorization roles and access token to user
-        res.json({ accessToken });
+        //res.json({ accessToken });
+        global.current_user = foundUser;
+        res.redirect('/home');
 
     } else {
+        
         res.sendStatus(401);
+        //res.redirect('/login');
     }
+
 }
 
 module.exports = { handleLogin };

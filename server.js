@@ -1,5 +1,6 @@
 const express = require('express');
 require('dotenv').config();
+const User = require('./models/User');
 const app = express();
 const path = require('path');
 const cors = require('cors');
@@ -14,6 +15,8 @@ const { logger } = require('./functions/eventLogger');
 const logError = require('./functions/errorHandler');
 const verifyJWT = require('./functions/JWTVerification');
 const credentials = require('./functions/credentialsHendler');
+
+global.current_user = null;
 
 const PORT = process.env.PORT || 5500;
 
@@ -58,7 +61,8 @@ app.use('/logout', require('./routes/logout'));
 app.use('/home', require('./routes/mainPage'));
 app.get('/index', (req,res) => {
     const data = {
-        pageTitle: 'index'
+        pageTitle: 'index',
+        current_user: global.current_user
     };
     res.render('index',data);
 })

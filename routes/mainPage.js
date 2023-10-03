@@ -5,7 +5,8 @@ const path = require('path');
 
 router.get('/', (req, res) => {
     const data = {
-        pageTitle: 'Pet welcome'
+        pageTitle: 'Pet welcome',
+        current_user: global.current_user
     };
     res.render('menu',data);
 });

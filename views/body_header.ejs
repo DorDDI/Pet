@@ -20,23 +20,25 @@
             <!-- nav-item - its nevigate item, nav-link - color, href - to what path and the name of th button -->
         </ul>
         <ul class="navbar-nav" >
-            <!--
-                {% if current_user.is_authenticated %}     NEED TO CHECK
-             
-            {% if section == 1%}
-            <a class="nav-item nav-link" href="{{url_for('movie_posts.new_post', section=section)}}">New Post</a>
-            {% else %}
-            {% if section == 2%}
-            <a class="nav-item nav-link" href="{{url_for('music_posts.new_post', section=section)}}">New Post</a>
-            {% endif %}
-            {% endif %}
-                <a class="nav-item nav-link" href="{{url_for('users.account', section=section)}}">{{current_user.username}}</a>
-                <a class="nav-item nav-link" href="{{url_for('users.logout', section=section)}}">Logout</a>
-            {% else %}
-                <a class="nav-item nav-link" href="{{url_for('users.login', section=section)}}">Login</a>
-                <a class="nav-item nav-link" href="{{url_for('users.register', section=section)}}">Register</a>
-            {% endif %}
-            -->
+            
+          <% if ((current_user) != null) { %>
+
+            <a class="nav-item nav-link" href="">New Pet</a>
+            <a class="nav-item nav-link" href=""><%= current_user.username %></a>
+            
+            <a class="nav-item nav-link" href="/logout">Logout</a>
+
+          <%}           
+
+          else { %>
+          <a class="nav-item nav-link" href="/login">Login</a>
+                <a class="nav-item nav-link" href="/register">Register</a>
+
+          <% }
+          %>
+
+
+            
 
 
         </ul>
